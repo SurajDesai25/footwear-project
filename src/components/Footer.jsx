@@ -14,10 +14,10 @@ export default function Footer() {
                             <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
                             <div>
                                 <ul className="colorlib-social-icons">
-                                    <li><a href="#"><i className="fa-brands fa-twitter"></i></a></li>
-                                    <li><a href="#"><i className="fa-brands fa-facebook"></i></a></li>
-                                    <li><a href="#"><i className="fa-brands fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i className="fa-brands fa-dribbble"></i></a></li>
+                                    <li><Link><i className="fa-brands fa-twitter"></i></Link></li>
+                                    <li><Link><i className="fa-brands fa-facebook"></i></Link></li>
+                                    <li><Link><i className="fa-brands fa-linkedin"></i></Link></li>
+                                    <li><Link><i className="fa-brands fa-dribbble"></i></Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -25,13 +25,13 @@ export default function Footer() {
                             <h4>Customer Care</h4>
                             <div>
                                 <ul className="colorlib-footer-links">
-                                    <li><a href="#">Contact</a></li>
-                                    <li><a href="#">Returns/Exchange</a></li>
-                                    <li><a href="#">Gift Voucher</a></li>
-                                    <li><a href="#">Wishlist</a></li>
-                                    <li><a href="#">Special</a></li>
-                                    <li><a href="#">Customer Services</a></li>
-                                    <li><a href="#">Site maps</a></li>
+                                    <li><Link>Contact</Link></li>
+                                    <li><Link>Returns/Exchange</Link></li>
+                                    <li><Link>Gift Voucher</Link></li>
+                                    <li><Link>Wishlist</Link></li>
+                                    <li><Link>Special</Link></li>
+                                    <li><Link>Customer Services</Link></li>
+                                    <li><Link>Site maps</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -39,11 +39,11 @@ export default function Footer() {
                             <h4>Information</h4>
                             <div>
                                 <ul className="colorlib-footer-links">
-                                    <li><a href="#">About us</a></li>
-                                    <li><a href="#">Delivery Information</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Support</a></li>
-                                    <li><a href="#">Order Tracking</a></li>
+                                    <li><Link>About us</Link></li>
+                                    <li><Link>Delivery Information</Link></li>
+                                    <li><Link>Privacy Policy</Link></li>
+                                    <li><Link>Support</Link></li>
+                                    <li><Link>Order Tracking</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -52,9 +52,9 @@ export default function Footer() {
                             <h4>News</h4>
                             <ul className="colorlib-footer-links">
                                 <li><a href="blog.html">Blog</a></li>
-                                <li><a href="#">Press</a></li>
+                                <li><Link>Press</Link></li>
                                 <li><Link to={"/adminlogin"}>Admin</Link></li>
-                                <li><a href="#">Exhibitions</a></li>
+                                <li><Link>Exhibitions</Link></li>
                             </ul>
                         </div>
 
@@ -64,7 +64,7 @@ export default function Footer() {
                                 <li>291 South 21th Street, <br /> Suite 721 New York NY 10016</li>
                                 <li><a href="tel://1234567920">+ 1235 2355 98</a></li>
                                 <li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-                                <li><a href="#">yoursite.com</a></li>
+                                <li><Link>yoursite.com</Link></li>
                             </ul>
                         </div>
                     </div>

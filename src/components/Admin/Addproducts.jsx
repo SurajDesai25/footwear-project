@@ -92,7 +92,7 @@ function Addproducts() {
       })
     
     }
-  }, [])
+  }, [id])
 
   
 

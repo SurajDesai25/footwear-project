@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Contact() {
 
@@ -20,7 +21,7 @@ export default function Contact() {
 								<p><span><i className="icon-paperplane"></i></span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
 							</div>
 							<div className="col-md-3">
-								<p><span><i className="icon-globe"></i></span> <a href="#">yoursite.com</a></p>
+								<p><span><i className="icon-globe"></i></span> <Link>yoursite.com</Link></p>
 							</div>
 						</div>
 					</div>

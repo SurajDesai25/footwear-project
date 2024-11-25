@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { removeToCart, incrementByQuantity, decrementByQuantity, AddAllTotal } from '../app/cartSlice.js'
-import { Link, Navigate, useNavigate } from 'react-router-dom';
-import Swal from 'sweetalert2';
+import { removeToCart, incrementByQuantity, decrementByQuantity } from '../app/cartSlice.js'
+import { Link, useNavigate } from 'react-router-dom';
 
 
 function Cart() {
@@ -10,9 +9,7 @@ function Cart() {
 	const [coupon, setCoupon] = useState("")
 	const dispatch = useDispatch();
 	let data = useSelector((state) => state.cart.cartProducts)
-	let Subtotal = useSelector((state) => state.cart.allTotal)
 	const navigate = useNavigate()
-	// console.log(Subtotal);
 	// console.log(data);
 
 
@@ -53,7 +50,7 @@ function Cart() {
 		<div>
 			{data.length > 0 ? 
 			 <><div className="m-2">
-				<p className="bread"><span><a>Home</a></span> / <span>Shopping Cart</span></p>
+				<p className="bread"><span><Link>Home</Link></span> / <span>Shopping Cart</span></p>
 			</div>
 
 

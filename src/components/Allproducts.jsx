@@ -1,4 +1,3 @@
-import { logDOM } from '@testing-library/react';
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
@@ -55,7 +54,6 @@ function Allproducts() {
               <option value="price-asc-rank">Price: Low to High</option>
               <option value="price-desc-rank">Price: High to Low</option>
               <option value="review-rank">Avg. Customer Review</option>
-              <option value="date-desc-rank">New Arrivals</option>
             </select>
           </div>
 
@@ -95,13 +93,13 @@ function Allproducts() {
                     <h4 className="text-secondary font-weight-bold">Size</h4>
                     <ul>
                       <li><button className="btn p-0 text-white">3</button></li>
-                      <li><a href="#">4</a></li>
-                      <li><a href="#">5</a></li>
-                      <li><a href="#">6</a></li>
-                      <li><a href="#">7</a></li>
-                      <li><a href="#">8</a></li>
-                      <li><a href="#">9</a></li>
-                      <li><a href="#">10</a></li>
+                      <li><Link>4</Link></li>
+                      <li><Link>5</Link></li>
+                      <li><Link>6</Link></li>
+                      <li><Link>7</Link></li>
+                      <li><Link>8</Link></li>
+                      <li><Link>9</Link></li>
+                      <li><Link>10</Link></li>
                     </ul>
                   </div>
                 </div>
@@ -111,15 +109,15 @@ function Allproducts() {
                 <div className="side border mb-1">
                   <h3>Colors</h3>
                   <ul>
-                    <li><a href="#" >Black</a></li>
-                    <li><a href="#">White</a></li>
-                    <li><a href="#">Blue</a></li>
-                    <li><a href="#">Red</a></li>
-                    <li><a href="#">Green</a></li>
-                    <li><a href="#">Grey</a></li>
-                    <li><a href="#">Orange</a></li>
-                    <li><a href="#">Cream</a></li>
-                    <li><a href="#">Brown</a></li>
+                    <li><Link >Black</Link></li>
+                    <li><Link>White</Link></li>
+                    <li><Link>Blue</Link></li>
+                    <li><Link>Red</Link></li>
+                    <li><Link>Green</Link></li>
+                    <li><Link>Grey</Link></li>
+                    <li><Link>Orange</Link></li>
+                    <li><Link>Cream</Link></li>
+                    <li><Link>Brown</Link></li>
                   </ul>
                 </div>
               </div>
@@ -152,14 +150,12 @@ function Allproducts() {
                       <div className="col-lg-4 mb-4 mt-2 text-center">
                         <div className="product-entry  border rounded">
 
-                          <Link to={"/productdescription/" + eachData.id} >
-                          <a href="" className="prod-img">
+                          <Link to={"/productdescription/" + eachData.id} className="prod-img">
                             <img id="image" src={eachData.image} className="img-fluid" alt="E-Commerce img" style={{ width: "180px", height:"140px" }} />
-                            </a>
                             </Link>
 
                           <div className="desc">
-                            <h2><a href="#">{eachData.brand} <br />{eachData.title}</a></h2>
+                            <h2><Link>{eachData.brand} <br />{eachData.title}</Link></h2>
                             <span className="price">
                               <h4>{eachData.price}</h4>
                             </span>

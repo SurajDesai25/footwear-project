@@ -23,7 +23,7 @@ function Adminlogin() {
     if (checkedAdminLoggedIn()) {
       navigate("/admin")
     }
-  }, [])
+  }, [navigate])
 
 
   function handleSubmit(e) {
@@ -38,7 +38,7 @@ function Adminlogin() {
         // title: "Oops...",
         text: "Please Enter Valid Credentials",
 
-      });
+      })
     }
 
 

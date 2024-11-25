@@ -1,13 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Products() {
 
 
 
 
-  const [data, setData] = useState([]);
   const [newData, setNewData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -74,7 +73,7 @@ function Products() {
                   newData.map((eachData, i) => {
                     return (
                       <tr key={eachData.id}>
-                        <td scope="row">{i + 1}</td>
+                        <td>{i + 1}</td>
                         <td>
                       
                           <img src={eachData.image} style={{ width: "80px", height: "80px" }} alt="" />

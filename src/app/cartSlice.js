@@ -31,7 +31,7 @@ export const cartSlice = createSlice({
 
     removeToCart: (state, action) => {
       let productId = action.payload;
-      return state.cartProducts.filter((item) => item.id != productId);
+      state.cartProducts = state.cartProducts.filter((item) => item.id !== productId)
       saveCartToLocalStorage(state.cartProducts)
 
     },

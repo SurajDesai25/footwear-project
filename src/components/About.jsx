@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function About() {
   return (
@@ -7,7 +8,7 @@ export default function About() {
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<p class="bread"><span><a href="index.html">Home</a></span> / <span>About</span></p>
+						<p class="bread"><span><Link>Home</Link></span> / <span>About</span></p>
 					</div>
 				</div>
 			</div>

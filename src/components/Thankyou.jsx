@@ -13,11 +13,11 @@ function Thankyou() {
 <h2 className="mb-4">Thank you for purchasing, Your order is complete</h2>
 <p>
     <Link to={"/"}>
-<a className="btn btn-primary btn-outline-primary rounded">Home</a>
+<button className="btn btn-primary btn-outline-primary rounded">Home</button>
 </Link>
 <Link to={"/allproducts"}>
-<a  className="btn btn-primary btn-outline-primary rounded">
-<i className="fa-solid fa-cart-shopping"></i> Continue Shopping</a>
+<button  className="btn btn-primary btn-outline-primary rounded">
+<i className="fa-solid fa-cart-shopping"></i> Continue Shopping</button>
 </Link>
 </p>
 </div>

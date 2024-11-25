@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Women() {
 
@@ -9,7 +10,7 @@ export default function Women() {
 			<div className="container">
 				<div className="row">
 					<div className="col">
-						<p className="bread"><span><a href="index.html">Home</a></span> / <span>Women</span></p>
+						<p className="bread"><span><Link to="/">Home</Link></span> / <span>Women</span></p>
 					</div>
 				</div>
 			</div>
@@ -23,7 +24,7 @@ export default function Women() {
 							<h2>Women's</h2>
 						</div>
 						<div className="menu text-center">
-							<p><a href="#">New Arrivals</a> <a href="#">Best Sellers</a> <a href="#">Extended Widths</a> <a href="#">Sale</a></p>
+							<p><Link>New Arrivals</Link> <Link>Best Sellers</Link> <Link>Extended Widths</Link> <Link>Sale</Link></p>
 						</div>
 					</div>
 				</div>
@@ -38,7 +39,7 @@ export default function Women() {
 							<div className="featured-img featured-img-2" style={{backgroundImage: `url(images/img_bg_2.jpg)`}}>
 								<h2>Casuals</h2>
 							</div>
-								<p><a href="#" className="btn btn-primary btn-lg">Shop now</a></p>
+								<p><Link className="btn btn-primary btn-lg">Shop now</Link></p>
 						</div>
 					</div>
 					<div className="col-sm-4 text-center">
@@ -46,7 +47,7 @@ export default function Women() {
 							<div className="featured-img featured-img-2" style={{backgroundImage: `url(images/women.jpg)`}}>
 								<h2>Dress</h2>
 							</div>
-								<p><a href="#" className="btn btn-primary btn-lg">Shop now</a></p>
+								<p><Link className="btn btn-primary btn-lg">Shop now</Link></p>
 						</div>
 					</div>
 					<div className="col-sm-4 text-center">
@@ -54,7 +55,7 @@ export default function Women() {
 							<div className="featured-img featured-img-2" style={{backgroundImage: `url(images/item-11.jpg)`}}>
 								<h2>Sports</h2>
 							</div>
-								<p><a href="#" className="btn btn-primary btn-lg">Shop now</a></p>
+								<p><Link className="btn btn-primary btn-lg">Shop now</Link></p>
 						</div>
 					</div>
 				</div>
@@ -70,11 +71,11 @@ export default function Women() {
 								<div className="side border mb-1">
 									<h3>Brand</h3>
 									<ul>
-										<li><a href="#">Nike</a></li>
-										<li><a href="#">Adidas</a></li>
-										<li><a href="#">Merrel</a></li>
-										<li><a href="#">Gucci</a></li>
-										<li><a href="#">Skechers</a></li>
+										<li><Link>Nike</Link></li>
+										<li><Link>Adidas</Link></li>
+										<li><Link>Merrel</Link></li>
+										<li><Link>Gucci</Link></li>
+										<li><Link>Skechers</Link></li>
 									</ul>
 								</div>
 							</div>
@@ -84,28 +85,28 @@ export default function Women() {
 									<div className="block-26 mb-2">
 										<h4>Size</h4>
 					               <ul>
-					                  <li><a href="#">7</a></li>
-					                  <li><a href="#">7.5</a></li>
-					                  <li><a href="#">8</a></li>
-					                  <li><a href="#">8.5</a></li>
-					                  <li><a href="#">9</a></li>
-					                  <li><a href="#">9.5</a></li>
-					                  <li><a href="#">10</a></li>
-					                  <li><a href="#">10.5</a></li>
-					                  <li><a href="#">11</a></li>
-					                  <li><a href="#">11.5</a></li>
-					                  <li><a href="#">12</a></li>
-					                  <li><a href="#">12.5</a></li>
-					                  <li><a href="#">13</a></li>
-					                  <li><a href="#">13.5</a></li>
-					                  <li><a href="#">14</a></li>
+					                  <li><Link>7</Link></li>
+					                  <li><Link>7.5</Link></li>
+					                  <li><Link>8</Link></li>
+					                  <li><Link>8.5</Link></li>
+					                  <li><Link>9</Link></li>
+					                  <li><Link>9.5</Link></li>
+					                  <li><Link>10</Link></li>
+					                  <li><Link>10.5</Link></li>
+					                  <li><Link>11</Link></li>
+					                  <li><Link>11.5</Link></li>
+					                  <li><Link>12</Link></li>
+					                  <li><Link>12.5</Link></li>
+					                  <li><Link>13</Link></li>
+					                  <li><Link>13.5</Link></li>
+					                  <li><Link>14</Link></li>
 					               </ul>
 					            </div>
 					            <div className="block-26">
 										<h4>Width</h4>
 					               <ul>
-					                  <li><a href="#">M</a></li>
-					                  <li><a href="#">W</a></li>
+					                  <li><Link>M</Link></li>
+					                  <li><Link>W</Link></li>
 					               </ul>
 					            </div>
 								</div>
@@ -114,11 +115,11 @@ export default function Women() {
 								<div className="side border mb-1">
 									<h3>Style</h3>
 									<ul>
-										<li><a href="#">Slip Ons</a></li>
-										<li><a href="#">Boots</a></li>
-										<li><a href="#">Sandals</a></li>
-										<li><a href="#">Lace Ups</a></li>
-										<li><a href="#">Oxfords</a></li>
+										<li><Link>Slip Ons</Link></li>
+										<li><Link>Boots</Link></li>
+										<li><Link>Sandals</Link></li>
+										<li><Link>Lace Ups</Link></li>
+										<li><Link>Oxfords</Link></li>
 									</ul>
 								</div>
 							</div>
@@ -126,15 +127,15 @@ export default function Women() {
 								<div className="side border mb-1">
 									<h3>Colors</h3>
 									<ul>
-										<li><a href="#">Black</a></li>
-										<li><a href="#">White</a></li>
-										<li><a href="#">Blue</a></li>
-										<li><a href="#">Red</a></li>
-										<li><a href="#">Green</a></li>
-										<li><a href="#">Grey</a></li>
-										<li><a href="#">Orange</a></li>
-										<li><a href="#">Cream</a></li>
-										<li><a href="#">Brown</a></li>
+										<li><Link>Black</Link></li>
+										<li><Link>White</Link></li>
+										<li><Link>Blue</Link></li>
+										<li><Link>Red</Link></li>
+										<li><Link>Green</Link></li>
+										<li><Link>Grey</Link></li>
+										<li><Link>Orange</Link></li>
+										<li><Link>Cream</Link></li>
+										<li><Link>Brown</Link></li>
 									</ul>
 								</div>
 							</div>
@@ -142,8 +143,8 @@ export default function Women() {
 								<div className="side border mb-1">
 									<h3>Material</h3>
 									<ul>
-										<li><a href="#">Leather</a></li>
-										<li><a href="#">Suede</a></li>
+										<li><Link>Leather</Link></li>
+										<li><Link>Suede</Link></li>
 									</ul>
 								</div>
 							</div>
@@ -151,9 +152,9 @@ export default function Women() {
 								<div className="side border mb-1">
 									<h3>Technologies</h3>
 									<ul>
-										<li><a href="#">BioBevel</a></li>
-										<li><a href="#">Groove</a></li>
-										<li><a href="#">FlexBevel</a></li>
+										<li><Link>BioBevel</Link></li>
+										<li><Link>Groove</Link></li>
+										<li><Link>FlexBevel</Link></li>
 									</ul>
 								</div>
 							</div>
@@ -163,33 +164,33 @@ export default function Women() {
 						<div className="row row-pb-md">
 							<div className="col-lg-4 mb-4 text-center">
 								<div className="product-entry border">
-									<a href="#" className="prod-img">
+									<Link className="prod-img">
 										<img src={require("../assets/images/item-1.jpg")} className="img-fluid" alt="Free html5 bootstrap 4 template"/>
-									</a>
+									</Link>
 									<div className="desc">
-										<h2><a href="#">Women's Boots Shoes Maca</a></h2>
+										<h2><Link>Women's Boots Shoes Maca</Link></h2>
 										<span className="price">$139.00</span>
 									</div>
 								</div>
 							</div>
 							<div className="col-lg-4 mb-4 text-center">
 								<div className="product-entry border">
-									<a href="#" className="prod-img">
+									<Link className="prod-img">
 										<img src={require("../assets/images/item-2.jpg")} className="img-fluid" alt="Free html5 bootstrap 4 template"/>
-									</a>
+									</Link>
 									<div className="desc">
-										<h2><a href="#">Women's Minam Meaghan</a></h2>
+										<h2><Link>Women's Minam Meaghan</Link></h2>
 										<span className="price">$139.00</span>
 									</div>
 								</div>
 							</div>
 							<div className="col-lg-4 mb-4 text-center">
 								<div className="product-entry border">
-									<a href="#" className="prod-img">
+									<Link className="prod-img">
 										<img src={require("../assets/images/item-3.jpg")} className="img-fluid" alt="Free html5 bootstrap 4 template"/>
-									</a>
+									</Link>
 									<div className="desc">
-										<h2><a href="#">Men's Taja Commissioner</a></h2>
+										<h2><Link>Men's Taja Commissioner</Link></h2>
 										<span className="price">$139.00</span>
 									</div>
 								</div>
@@ -197,33 +198,33 @@ export default function Women() {
 							<div className="w-100"></div>
 							<div className="col-lg-4 mb-4 text-center">
 								<div className="product-entry border">
-									<a href="#" className="prod-img">
+									<Link className="prod-img">
 										<img src={require("../assets/images/item-4.jpg")} className="img-fluid" alt="Free html5 bootstrap 4 template"/>
-									</a>
+									</Link>
 									<div className="desc">
-										<h2><a href="#">Russ Men's Sneakers</a></h2>
+										<h2><Link>Russ Men's Sneakers</Link></h2>
 										<span className="price">$139.00</span>
 									</div>
 								</div>
 							</div>
 							<div className="col-lg-4 mb-4 text-center">
 								<div className="product-entry border">
-									<a href="#" className="prod-img">
+									<Link className="prod-img">
 										<img src={require("../assets/images/item-5.jpg")} className="img-fluid" alt="Free html5 bootstrap 4 template"/>
-									</a>
+									</Link>
 									<div className="desc">
-										<h2><a href="#">Women's Boots Shoes Maca</a></h2>
+										<h2><Link>Women's Boots Shoes Maca</Link></h2>
 										<span className="price">$139.00</span>
 									</div>
 								</div>
 							</div>
 							<div className="col-lg-4 mb-4 text-center">
 								<div className="product-entry border">
-									<a href="#" className="prod-img">
+									<Link className="prod-img">
 										<img src={require("../assets/images/item-6.jpg")} className="img-fluid" alt="Free html5 bootstrap 4 template"/>
-									</a>
+									</Link>
 									<div className="desc">
-										<h2><a href="#">Women's Boots Shoes Maca</a></h2>
+										<h2><Link>Women's Boots Shoes Maca</Link></h2>
 										<span className="price">$139.00</span>
 									</div>
 								</div>
@@ -231,33 +232,33 @@ export default function Women() {
 							<div className="w-100"></div>
 							<div className="col-lg-4 mb-4 text-center">
 								<div className="product-entry border">
-									<a href="#" className="prod-img">
+									<Link className="prod-img">
 										<img src={require("../assets/images/item-7.jpg")} className="img-fluid" alt="Free html5 bootstrap 4 template"/>
-									</a>
+									</Link>
 									<div className="desc">
-										<h2><a href="#">Women's Boots Shoes Maca</a></h2>
+										<h2><Link>Women's Boots Shoes Maca</Link></h2>
 										<span className="price">$139.00</span>
 									</div>
 								</div>
 							</div>
 							<div className="col-lg-4 mb-4 text-center">
 								<div className="product-entry border">
-									<a href="#" className="prod-img">
+									<Link className="prod-img">
 										<img src={require("../assets/images/item-8.jpg")} className="img-fluid" alt="Free html5 bootstrap 4 template"/>
-									</a>
+									</Link>
 									<div className="desc">
-										<h2><a href="#">Women's Boots Shoes Maca</a></h2>
+										<h2><Link>Women's Boots Shoes Maca</Link></h2>
 										<span className="price">$139.00</span>
 									</div>
 								</div>
 							</div>
 							<div className="col-lg-4 mb-4 text-center">
 								<div className="product-entry border">
-									<a href="#" className="prod-img">
+									<Link className="prod-img">
 										<img src={require("../assets/images/item-9.jpg")} className="img-fluid" alt="Free html5 bootstrap 4 template"/>
-									</a>
+									</Link>
 									<div className="desc">
-										<h2><a href="#">Women's Boots Shoes Maca</a></h2>
+										<h2><Link>Women's Boots Shoes Maca</Link></h2>
 										<span className="price">$139.00</span>
 									</div>
 								</div>
@@ -265,33 +266,33 @@ export default function Women() {
 							<div className="w-100"></div>
 							<div className="col-lg-4 mb-4 text-center">
 								<div className="product-entry border">
-									<a href="#" className="prod-img">
+									<Link className="prod-img">
 										<img src={require("../assets/images/item-10.jpg")} className="img-fluid" alt="Free html5 bootstrap 4 template"/>
-									</a>
+									</Link>
 									<div className="desc">
-										<h2><a href="#">Women's Boots Shoes Maca</a></h2>
+										<h2><Link>Women's Boots Shoes Maca</Link></h2>
 										<span className="price">$139.00</span>
 									</div>
 								</div>
 							</div>
 							<div className="col-lg-4 mb-4 text-center">
 								<div className="product-entry border">
-									<a href="#" className="prod-img">
+									<Link className="prod-img">
 										<img src={require("../assets/images/item-11.jpg")} className="img-fluid" alt="Free html5 bootstrap 4 template"/>
-									</a>
+									</Link>
 									<div className="desc">
-										<h2><a href="#">Women's Boots Shoes Maca</a></h2>
+										<h2><Link>Women's Boots Shoes Maca</Link></h2>
 										<span className="price">$139.00</span>
 									</div>
 								</div>
 							</div>
 							<div className="col-lg-4 mb-4 text-center">
 								<div className="product-entry border">
-									<a href="#" className="prod-img">
+									<Link className="prod-img">
 										<img src={require("../assets/images/item-12.jpg")} className="img-fluid" alt="Free html5 bootstrap 4 template"/>
-									</a>
+									</Link>
 									<div className="desc">
-										<h2><a href="#">Women's Boots Shoes Maca</a></h2>
+										<h2><Link>Women's Boots Shoes Maca</Link></h2>
 										<span className="price">$139.00</span>
 									</div>
 								</div>
@@ -299,33 +300,33 @@ export default function Women() {
 							<div className="w-100"></div>
 							<div className="col-lg-4 mb-4 text-center">
 								<div className="product-entry border">
-									<a href="#" className="prod-img">
+									<Link className="prod-img">
 										<img src={require("../assets/images/item-13.jpg")} className="img-fluid" alt="Free html5 bootstrap 4 template"/>
-									</a>
+									</Link>
 									<div className="desc">
-										<h2><a href="#">Women's Boots Shoes Maca</a></h2>
+										<h2><Link>Women's Boots Shoes Maca</Link></h2>
 										<span className="price">$139.00</span>
 									</div>
 								</div>
 							</div>
 							<div className="col-lg-4 mb-4 text-center">
 								<div className="product-entry border">
-									<a href="#" className="prod-img">
+									<Link className="prod-img">
 										<img src={require("../assets/images/item-14.jpg")} className="img-fluid" alt="Free html5 bootstrap 4 template"/>
-									</a>
+									</Link>
 									<div className="desc">
-										<h2><a href="#">Women's Boots Shoes Maca</a></h2>
+										<h2><Link>Women's Boots Shoes Maca</Link></h2>
 										<span className="price">$139.00</span>
 									</div>
 								</div>
 							</div>
 							<div className="col-lg-4 mb-4 text-center">
 								<div className="product-entry border">
-									<a href="#" className="prod-img">
+									<Link className="prod-img">
 										<img src={require("../assets/images/item-15.jpg")} className="img-fluid" alt="Free html5 bootstrap 4 template"/>
-									</a>
+									</Link>
 									<div className="desc">
-										<h2><a href="#">Women's Boots Shoes Maca</a></h2>
+										<h2><Link>Women's Boots Shoes Maca</Link></h2>
 										<span className="price">$139.00</span>
 									</div>
 								</div>
@@ -335,13 +336,13 @@ export default function Women() {
 							<div className="col-md-12 text-center">
 								<div className="block-27">
 				               <ul>
-					               <li><a href="#"><i className="fa-solid fa-arrow-left"></i></a></li>
+					               <li><Link><i className="fa-solid fa-arrow-left"></i></Link></li>
 				                  <li className="active"><span>1</span></li>
-				                  <li><a href="#">2</a></li>
-				                  <li><a href="#">3</a></li>
-				                  <li><a href="#">4</a></li>
-				                  <li><a href="#">5</a></li>
-				                  <li><a href="#"><i className="fa-solid fa-arrow-right"></i></a></li>
+				                  <li><Link>2</Link></li>
+				                  <li><Link>3</Link></li>
+				                  <li><Link>4</Link></li>
+				                  <li><Link>5</Link></li>
+				                  <li><Link><i className="fa-solid fa-arrow-right"></i></Link></li>
 				               </ul>
 				            </div>
 							</div>

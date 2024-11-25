@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux';
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 function Checkout() {
-    const navigate = useNavigate();
+    const navigate = useNavigate()
     const location = useLocation()
     const totalAmount = location.state?.totalAmount
     console.log(totalAmount);
@@ -16,7 +16,7 @@ function Checkout() {
         if(!totalAmount){
             navigate("/")
         }
-    }, [])
+    }, [navigate, totalAmount])
 
     function handlePayment() {
         var options = {

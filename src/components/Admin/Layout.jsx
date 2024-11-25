@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Link, Navigate, Outlet, useNavigate } from 'react-router-dom'
+import { Link, Outlet, useNavigate } from 'react-router-dom'
 
 function Layout() {
 
@@ -20,7 +20,7 @@ function Layout() {
     if (!checkedAdminLoggedIn()) {
       navigate("/adminlogin")
     }
-  }, [])
+  }, [navigate])
   
   return (
     <div className="container-fluid">
@@ -30,19 +30,19 @@ function Layout() {
         <div className="position-sticky">
           <div className="list-group list-group-flush mx-2 mt-4">
             <Link to={"/admin"}>
-            <a className="list-group-item list-group-item-action py-2 ripple"><span>Dashboard</span></a>
+            <Link className="list-group-item list-group-item-action py-2 ripple"><span>Dashboard</span></Link>
             </Link>
 
             <Link to={"/admin/addproduct"}> 
-            <a className="list-group-item list-group-item-action py-2 ripple"><span>Add Product</span></a>
+            <Link className="list-group-item list-group-item-action py-2 ripple"><span>Add Product</span></Link>
             </Link>
             <Link to={"/admin/products"}>
-            <a className="list-group-item list-group-item-action py-2 ripple">Products</a>
+            <Link className="list-group-item list-group-item-action py-2 ripple">Products</Link>
             </Link>
             <Link to={"/"}>
-            <a className="list-group-item list-group-item-action py-2 ripple" onClick={logout}>
+            <Link className="list-group-item list-group-item-action py-2 ripple" onClick={logout}>
               Logout
-            </a>
+            </Link>
             </Link>
           </div>
         </div>
