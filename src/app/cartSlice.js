@@ -1,9 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  cartProducts: [],
-  allTotal: 0,
-};
+const loadCartFromLocalStorage = () => {
+  const cartData = localStorage.getItem("cartData")
+  return cartData ? JSON.parse(cartData) : {cartProducts: []}
+}
+
+const saveCartToLocalStorage = (cartProducts) =>{
+  const cartData = {cartProducts}
+  localStorage.setItem("cartData", JSON.stringify(cartData))
+}
+const initialState = loadCartFromLocalStorage()
 
 export const cartSlice = createSlice({
   name: "cart",
@@ -20,17 +26,15 @@ export const cartSlice = createSlice({
       } else {
         state.cartProducts.push(action.payload);
       }
+      saveCartToLocalStorage(state.cartProducts)
     },
 
-    // removeToCart: (state, action) => {
-    //   let productId = action.payload;
-    //   return state.cartProducts.filter((item) => item.id != productId);
-    // },
     removeToCart: (state, action) => {
       let productId = action.payload;
-      state.cartProducts = state.cartProducts.filter((item) => item.id !== productId);
+      return state.cartProducts.filter((item) => item.id != productId);
+      saveCartToLocalStorage(state.cartProducts)
+
     },
-    
 
     incrementByQuantity: (state, action) => {
       let productId = action.payload;
@@ -40,6 +44,8 @@ export const cartSlice = createSlice({
       if (findProduct) {
         findProduct.quantity += 1;
       }
+      saveCartToLocalStorage(state.cartProducts)
+
     },
 
     decrementByQuantity: (state, action) => {
@@ -50,11 +56,11 @@ export const cartSlice = createSlice({
       if (findProduct && findProduct.quantity > 1) {
         findProduct.quantity -= 1;
       }
+      saveCartToLocalStorage(state.cartProducts)
+
     },
 
-    AddAllTotal: (state, action) => {
-      state.allTotal = action.payload;
-    },
+  
   },
 });
 
@@ -63,7 +69,6 @@ export const {
   removeToCart,
   incrementByQuantity,
   decrementByQuantity,
-  AddAllTotal
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

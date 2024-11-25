@@ -1,8 +1,61 @@
-import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { useSelector } from 'react-redux';
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 function Checkout() {
     const navigate = useNavigate();
+    const location = useLocation()
+    const totalAmount = location.state?.totalAmount
+    console.log(totalAmount);
+    
+
+    const cartProducts = useSelector((state)=>state.cart.cartProducts)
+
+
+    useEffect(()=>{
+        if(!totalAmount){
+            navigate("/")
+        }
+    }, [])
+
+    function handlePayment() {
+        var options = {
+            "key": "rzp_test_4yosHYDduPYmKN", // Enter the Key ID generated from the Dashboard
+            "amount": totalAmount * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            "currency": "INR",
+            "name": "Cool Footwear", //your business name
+            "description": "Test Transaction",
+            "image": "https://lms.igaptechnologies.com/assets/images/logo.png",
+            // "order_id": "order_9A33XWu170gUtm", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+            "callback_url": "https://eneqd3r9zrjok.x.pipedream.net/",
+            "handler": function (response) {
+                if (response) {
+                 navigate("/thankyou")
+                }
+                // alert(response.razorpay_payment_id);
+                // alert(response.razorpay_order_id);
+                // alert(response.razorpay_signature)
+            },
+            "prefill": { //We recommend using the prefill parameter to auto-fill customer's contact information especially their phone number
+                "name": "Gaurav Kumar", //your customer's name
+                "email": "gaurav.kumar@example.com",
+                "contact": "9998882222" //Provide the customer's phone number for better conversion rates 
+            },
+            "notes": {
+                "address": "Razorpay Corporate Office"
+            },
+            "theme": {
+                // "color": "#3399cc"
+                "color": "#62b4b5"
+            }
+        };
+
+        var rzp1 = new window.Razorpay(options);
+
+        rzp1.open();
+
+    }
+    
 
     return (
         <div>
@@ -107,21 +160,23 @@ function Checkout() {
                                         <h2>Cart Total</h2>
                                         <ul>
                                             <li>
-                                                <span>Subtotal</span> <span>53994/-</span>
+                                                    {cartProducts.length > 0 && (
                                                 <ul>
-                                                    <li>
-                                                        <span>6  x  Daily wear Sneakers Adidas</span> <span>5999/-</span>
+                                                        
+                                                        {cartProducts.map((product)=>(
+
+                                                    <li key={product.id}>
+                                                        <span>{product.quantity}  x  {product.title}</span> <span>{product.price * product.quantity}/-</span>
                                                     </li>
-                                                    <li>
-                                                        <span>3  x  White Adidas Doorstep High Top Mens Sneakers Shoes </span> <span>6000/-</span>
-                                                    </li>
+                                                        ))}
                                                 </ul>
+                                                    )}
                                             </li>
                                             <li>
                                                 <span>Shipping</span> <span>50.00/-</span>
                                             </li>
                                             <li>
-                                                <span>Order Total</span> <span>53944/-</span>
+                                                <span>Order Total</span> <span>{totalAmount}</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -175,9 +230,9 @@ function Checkout() {
                             <div className="row">
                                 <div className="col-md-12 text-center">
                                     <p>
-                                        <Link to={"/thankyou"}>
-                                        <button className="btn btn-primary">Place an Order</button>
-                                        </Link>
+                                        
+                                        <button onClick={handlePayment} className="btn btn-primary">Place an Order</button>
+                                    
                                     </p>
                                 </div>
                             </div>

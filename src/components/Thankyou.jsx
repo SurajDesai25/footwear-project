@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function Thankyou() {
+
+  
   return (
     <div>
         <div className="col-sm-10 offset-sm-1 text-center">
